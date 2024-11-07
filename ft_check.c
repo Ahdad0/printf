@@ -12,35 +12,6 @@
 
 #include "ft_printf.h"
 
-static int ft_minicheck(char *format, int index, va_list args)
-{
-	int	i;
-	int j;
-
-	j = 0;
-	i = 0;
-	if (format[index] == '%')
-	{
-		if (ft_putchar('%') == -1)
-			return (-1);
-		i++;
-	}
-	else if (format[index] == 'c')
-	{
-		if (ft_putchar(va_arg(args, int) == -1))
-			return (-1);
-		i++;
-	}
-	else
-	{
-		j = ft_smallcheck(format, index, args);
-		if (j == -1)
-			return (-1);
-		i += j;
-	}
-	return (i);
-}
-
 static int	ft_smallcheck(char *format, int index, va_list args)
 {
 	int	i;
@@ -63,6 +34,35 @@ static int	ft_smallcheck(char *format, int index, va_list args)
 		i += ft_decimal(va_arg(args, int));
 	else if (format[index] == 'u')
 		i += ft_unsigned(va_arg(args, unsigned int));
+	return (i);
+}
+
+static int ft_minicheck(char *format, int index, va_list args)
+{
+	int	i;
+	int j;
+
+	j = 0;
+	i = 0;
+	if (format[index] == '%')
+	{
+		if (ft_putchar('%') == -1)
+			return (-1);
+		i++;
+	}
+	else if (format[index] == 'c')
+	{
+		if (ft_putchar(va_arg(args, int)) == -1)
+			return (-1);
+		i++;
+	}
+	else
+	{
+		j = ft_smallcheck(format, index, args);
+		if (j == -1)
+			return (-1);
+		i += j;
+	}
 	return (i);
 }
 

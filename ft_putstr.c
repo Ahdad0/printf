@@ -16,23 +16,16 @@ int	ft_putstr(char *s)
 {
 	int	i;
 	int	j;
-	int	p;
 
 	j = 0;
 	i = 0;
-	p = 0;
 	if (!s)
-	{
-		int a = write(1, "(null)", 6);
-		return (a);
-	}
+		return (write(1, "(null)", 6));
 	while (s[i])
 	{
-		int pp = ft_putchar(s[i]);
-		if (pp == -1)
+		if (ft_putchar(s[i]) == -1)
 			return (-1);
-		else
-			j++;
+		j++;
 		i++;
 	}
 	return (j);

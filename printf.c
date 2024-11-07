@@ -18,29 +18,21 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		len;
 	int		j;
-	int		a;
 
 	i = 0;
 	len = 0;
-	j = 0;
 	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			j = ft_check((char *)format, i + 1, args);
-			if (j == -1)
+			if ((j = ft_check((char *)format, i + 1, args)) == -1)
 				return (-1);
-			len = len + j;
+			len += j;
 			i++;
 		}
 		else
-		{
-			a = write(1, &format[i], 1);
-			if (a == -1)
-				return (-1);
-			len++;
-		}
+			len += write(1, &format[i], 1);
 		i++;
 	}
 	va_end(args);

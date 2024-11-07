@@ -3,8 +3,8 @@
 int main()
 {
 	int p = 9;
-	int a = ft_printf("\nadd=%p\n", &p);
-	printf("\nadd=%p\n", &p);
+	int a = ft_printf("%p %p\n", 0, 0);
+	printf("%p %p\n", 0, 0);
 	printf("");
 
 

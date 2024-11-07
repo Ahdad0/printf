@@ -83,13 +83,9 @@ static char	*ft_positive(char *temp, int n)
 
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		j;
 	char	*ptr;
 	char	temp[1024];
 
-	i = 0;
-	j = 0;
 	if (n <= -1)
 		return (ft_negative(temp, n));
 	else if (n != 0)
