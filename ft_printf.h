@@ -6,7 +6,7 @@
 /*   By: abahaded <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:18:29 by abahaded          #+#    #+#             */
-/*   Updated: 2024/11/08 10:41:13 by abahaded         ###   ########.fr       */
+/*   Updated: 2024/11/10 10:43:46 by abahaded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ size_t	ft_strlen(const char *s);
 char	*ft_itoa(int n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 int		ft_strput(char *s, int o);
+int		ft_pourcentage(char f);
 
 #endif

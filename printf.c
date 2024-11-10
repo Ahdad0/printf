@@ -6,25 +6,26 @@
 /*   By: abahaded <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 19:19:42 by abahaded          #+#    #+#             */
-/*   Updated: 2024/11/08 10:06:11 by abahaded         ###   ########.fr       */
+/*   Updated: 2024/11/10 11:25:51 by abahaded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	handle_format(const char *format, int *i, va_list args)
 {
 	int	j;
 
 	j = 0;
-	if (format[*i] == '%')
+	if (format[*i] == '%' && ft_pourcentage(format[*i + 1]) == 1)
 	{
 		j += ft_check((char *)format, *i + 1, args);
 		if (j == -1)
 			return (-1);
 		(*i)++;
 	}
-	else
+	else if (format[*i] != '%')
 	{
 		if (write(1, &format[*i], 1) == -1)
 			return (-1);
