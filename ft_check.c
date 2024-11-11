@@ -6,7 +6,7 @@
 /*   By: abahaded <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 21:59:10 by abahaded          #+#    #+#             */
-/*   Updated: 2024/11/10 10:08:36 by abahaded         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:15:14 by abahaded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static int	ft_smallcheck(char *format, int index, va_list args)
 		i += j;
 	}
 	else if (format[index] == 'X')
-		i += ft_hex_upper(va_arg(args, int));
+		i += ft_hex_upper(va_arg(args, unsigned int));
 	else if (format[index] == 'x')
-		i += ft_hex_lower(va_arg(args, int));
+		i += ft_hex_lower(va_arg(args, unsigned int));
 	else if (format[index] == 'd' || format[index] == 'i')
 		i += ft_decimal(va_arg(args, int));
 	else if (format[index] == 'u')

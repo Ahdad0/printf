@@ -19,4 +19,5 @@ clean:
 	rm -f $(OBJS)
 
 re: fclean all
-.SECONDARY:
+
+.SECONDARY: $(OBJS)

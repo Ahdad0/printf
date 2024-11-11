@@ -6,22 +6,20 @@
 /*   By: abahaded <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:47:22 by abahaded          #+#    #+#             */
-/*   Updated: 2024/11/08 10:38:28 by abahaded         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:14:59 by abahaded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hex_upper(int n)
+int	ft_hex_upper(unsigned int num)
 {
 	char			hex[17];
 	int				j;
 	char			check[1024];
 	int				o;
-	unsigned int	num;
 
 	ft_strlcpy(hex, "0123456789ABCDEF", 17);
-	num = n;
 	o = 0;
 	j = 0;
 	if (num == 0)

@@ -6,22 +6,20 @@
 /*   By: abahaded <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 18:27:56 by abahaded          #+#    #+#             */
-/*   Updated: 2024/11/08 10:37:01 by abahaded         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:14:19 by abahaded         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hex_lower(int n)
+int	ft_hex_lower(unsigned int num)
 {
 	char			hex[17];
 	int				j;
 	char			check[1024];
 	int				o;
-	unsigned int	num;
 
 	ft_strlcpy(hex, "0123456789abcdef", 17);
-	num = n;
 	o = 0;
 	j = 0;
 	if (num == 0)
