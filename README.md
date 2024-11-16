@@ -1,5 +1,35 @@
 # ft_printf - Custom Printf Implementation
 
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Format Specifiers](#format-specifiers)
+- [Implementation Details](#implementation-details)
+- [Build & Usage](#build--usage)
+- [Examples](#examples)
+
+## Overview
+
+`ft_printf` is a custom implementation of the standard C library's printf function, developed as part of the 1337 school curriculum. This project demonstrates advanced C programming concepts including:
+
+- Variadic functions
+- String parsing and formatting
+- Memory management
+- Number system conversions
+- Error handling
+
+The implementation closely mirrors the original printf functionality while maintaining performance and reliability.
+
+## Features
+
+- Zero external dependencies
+- No memory leaks
+- Efficient buffer management
+- Complete error handling
+- POSIX compliant
+
+## Format Specifiers
+
 | Specifier | Description | Example | Output |
 |-----------|-------------|---------|---------|
 | `%c` | Single character | `ft_printf("%c", 'A')` | `A` |
@@ -12,12 +42,7 @@
 | `%X` | Uppercase hexadecimal | `ft_printf("%X", 255)` | `FF` |
 | `%%` | Percentage sign | `ft_printf("%%")` | `%` |
 
-## Description
-`ft_printf` is a comprehensive reimplementation of the standard C library's printf function, developed as part of the 1337 school curriculum. This project challenges students to understand variadic functions, string parsing, and various number systems while maintaining memory efficiency and proper error handling.
-
-The implementation closely mirrors the behavior of the original printf function, providing essential formatting capabilities for C programs. This custom version maintains high performance while ensuring accurate output across all supported format specifiers.
-
-## Function Overview
+## Implementation Details
 
 ### Function Prototype
 ```c
