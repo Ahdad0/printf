@@ -1,13 +1,5 @@
 # ft_printf - Custom Printf Implementation
 
-## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Format Specifiers](#format-specifiers)
-- [Implementation Details](#implementation-details)
-- [Build & Usage](#build--usage)
-- [Examples](#examples)
-
 ## Overview
 
 `ft_printf` is a custom implementation of the standard C library's printf function, developed as part of the 1337 school curriculum. This project demonstrates advanced C programming concepts including:
