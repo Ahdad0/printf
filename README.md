@@ -1,18 +1,16 @@
 # ft_printf - Custom Printf Implementation
 
-## Table of Contents
-- [Description](#description)
-- [Function Overview](#function-overview)
-- [Supported Format Specifiers](#supported-format-specifiers)
-- [Project Structure](#project-structure)
-- [Technical Details](#technical-details)
-- [Getting Started](#getting-started)
-- [Usage Examples](#usage-examples)
-- [Testing](#testing)
-- [Common Issues](#common-issues)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+| Specifier | Description | Example | Output |
+|-----------|-------------|---------|---------|
+| `%c` | Single character | `ft_printf("%c", 'A')` | `A` |
+| `%s` | String | `ft_printf("%s", "Hello")` | `Hello` |
+| `%p` | Pointer address | `ft_printf("%p", ptr)` | `0x7fff5fbff8e8` |
+| `%d` | Decimal number | `ft_printf("%d", 42)` | `42` |
+| `%i` | Integer | `ft_printf("%i", -42)` | `-42` |
+| `%u` | Unsigned decimal | `ft_printf("%u", 42)` | `42` |
+| `%x` | Lowercase hexadecimal | `ft_printf("%x", 255)` | `ff` |
+| `%X` | Uppercase hexadecimal | `ft_printf("%X", 255)` | `FF` |
+| `%%` | Percentage sign | `ft_printf("%%")` | `%` |
 
 ## Description
 `ft_printf` is a comprehensive reimplementation of the standard C library's printf function, developed as part of the 1337 school curriculum. This project challenges students to understand variadic functions, string parsing, and various number systems while maintaining memory efficiency and proper error handling.
